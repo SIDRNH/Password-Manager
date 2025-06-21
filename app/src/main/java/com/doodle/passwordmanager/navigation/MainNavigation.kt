@@ -1,7 +1,5 @@
 package com.doodle.passwordmanager.navigation
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
@@ -10,7 +8,6 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavBackStackEntry
@@ -20,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.doodle.passwordmanager.R
+import com.doodle.passwordmanager.generator.Generator
 import com.doodle.passwordmanager.ui.theme.PasswordManagerTheme
 import com.doodle.passwordmanager.vault.Vault
 import kotlinx.serialization.Serializable
@@ -117,12 +115,7 @@ fun MainNavigation() {
                     Vault(navController = mainNavController);
                 }
                 composable<GeneratorScreen> {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text("Generator")
-                    }
+                    Generator(navController = mainNavController);
                 }
             }
         }
