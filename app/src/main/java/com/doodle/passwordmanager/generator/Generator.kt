@@ -187,7 +187,10 @@ fun Generator(navController: NavController) {
                 onClick = {},
                 content = {
                     Text(
-                        text = "Generate Password"
+                        text = "Generate Password",
+                        fontFamily = PlusJakartaSansFontFamily,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold
                     )
                 },
                 colors = ButtonDefaults.buttonColors(
