@@ -63,4 +63,6 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     //Kotlin Serialization
     implementation(libs.kotlinx.serialization.json)
+    //Adaptive UI
+    implementation(libs.material3.adaptive)
 }
